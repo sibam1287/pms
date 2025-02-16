@@ -50,6 +50,8 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+
+
     private Users createNewUsers(String userType, SignupDTO signupDTO) {
         Users user = new Users();
         user.setName(signupDTO.getName());
@@ -85,6 +87,11 @@ public class UserServiceImpl implements UserService {
                 : String.format("%09d", Integer.parseInt(uuid.substring(0, Math.min(uuid.length(), 8))));
     }
 
+
+    @Override
+    public String getAllVendor(SignupDTO signupDTO) {
+        return null;
+    }
 
 
 
