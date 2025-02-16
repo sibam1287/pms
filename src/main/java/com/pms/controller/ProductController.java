@@ -29,10 +29,7 @@ public class ProductController {
         return processRequest(authHeader, () -> productService.saveProduct(productDTO));
     }
 
-    @PostMapping("/getProduct")
-    public String getProduct(@RequestHeader("Authorization") String authHeader, @RequestBody ProductDTO productDTO) {
-        return processRequest(authHeader, () -> productService.getProduct(productDTO));
-    }
+
 
     @PostMapping("/deleteProduct")
     public String deleteProduct(@RequestHeader("Authorization") String authHeader, @RequestBody ProductDTO productDTO) {
@@ -62,9 +59,19 @@ public class ProductController {
         }
     }
 
+
+
+
+
+    
+
     @FunctionalInterface
     interface RequestHandler {
         String handle();
     }
+
+
+
+
 
 }

@@ -7,4 +7,7 @@ import org.springframework.stereotype.Service;
 public interface UserService {
 
     String vendorSignUp(SignupDTO signupDTO);
+
+
+    String getAllVendor(SignupDTO signupDTO);
 }

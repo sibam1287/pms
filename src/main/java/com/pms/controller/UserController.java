@@ -24,4 +24,13 @@ public class UserController {
             return ResponseData.generateFailedRes("Server err!", null);
         }
     }
+
+    @PostMapping("/getAllVendor")
+    public String getAllVendor(@RequestBody SignupDTO signupDTO) {
+        try {
+            return userService.getAllVendor(signupDTO);
+        } catch (Exception e) {
+            return ResponseData.generateFailedRes("Server err!", null);
+        }
+    }
 }
